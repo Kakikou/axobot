@@ -246,7 +246,7 @@ The **Trader** is the heart of the execution system, responsible for placing and
 - Zero allocation, zero contention
 
 **SIMD Deserialization:**
-- Optimized number conversion via SIMD for JSON parsing
+- Optimized number conversion and JSON parsing via SIMD: [faster-parser](https://github.com/Kakikou/faster-parser)
 - Reduced latency for parsing exchange messages
 
 **Async I/O:**
@@ -288,11 +288,11 @@ The **Trader** is the heart of the execution system, responsible for placing and
 
 #### CI/CD with GitHub Actions
 
-Deployment is automated via **GitHub Actions**:
+Deployment is automated via **Ansible** and **GitHub Actions**:
 
 - Automatic build of Docker images for each component (Trader, Feeder, Account Monitor, Backend)
 - Push of images to a personal Docker registry
-- Triggered on every commit to main branches
+- Cloud machines prepared via Ansible to add new target into **Nomad**
 
 #### Process Management with HashiCorp Nomad
 
