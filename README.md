@@ -313,11 +313,11 @@ Deployment is automated via **Ansible** and **GitHub Actions**:
 
 - Automatic build of Docker images for each component (Trader, Feeder, Account Monitor, Backend)
 - Push of images to a personal Docker registry
-- Cloud machines prepared via Ansible to add new target into **Nomad**
+- Cloud machines prepared via Ansible and joined as new nodes to the **Docker Swarm** cluster
 
-#### Process Management with HashiCorp Nomad
+#### Process Management with Docker Swarm
 
-Execution and monitoring processes are orchestrated by **HashiCorp Nomad**:
+Execution and monitoring processes are orchestrated by **Docker Swarm**:
 
 **On-demand instantiation:**
 - Execution (Trader) and monitoring (Account Monitor) processes are instantiated dynamically on demand
